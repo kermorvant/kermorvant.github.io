@@ -1698,16 +1698,15 @@
   ],
   "service": [
     {
-      "id": "http://localhost:5001/search",
-      "type": "SearchService2",
+      "@context": "http://iiif.io/api/search/0/context.json",
+      "@id": "http://localhost:5001/search",
+      "profile": "http://iiif.io/api/search/0/search",
       "label": "Image Content Search",
-      "service": [
-        {
-          "id": "http://localhost:5001/search/autocomplete",
-          "type": "AutoCompleteService1",
-          "label": "Autocomplete"
-        }
-      ]
+      "service": {
+        "@id": "http://localhost:5001/search/autocomplete",
+        "profile": "http://iiif.io/api/search/0/autocomplete",
+        "label": "Autocomplete"
+      }
     }
   ]
 }
